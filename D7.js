@@ -2,6 +2,9 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+
+
+
 const concatStrings = (str1, str2) => {
   const newStr = str1.slice(0, 2) + str2.slice(-3);
   console.log(newStr.toUpperCase());
@@ -24,9 +27,9 @@ console.log(randomNumberArray());
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
-const evenNumbers = numbersArray.filter((number) => {
-  if (number % 2 === 0) {
+/*number e un numero del array alla volta, partendo dal primo*/ 
+const evenNumbers = numbersArray.filter((number) => { 
+  if (number % 2 ===0) {
     return true;
   } else {
     return false;
@@ -47,6 +50,8 @@ console.log(sommaNumeri([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+/*
+il total e il nostro accumulatore lo 0 alla fine della riga 0 sta per indicare da dove parte l-accumulatore*/
 const sommaNumeri2 = (num) => {
   return num.reduce((totale, numero) => totale + numero, 0);
 };
@@ -201,7 +206,10 @@ const movies = [
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
 const oldestMovie = () => {
+  /* alla riga 210 abbiamo creato una variabile dove abbiamo detto che il primo film del array dato sia il piu vecchio e poi abbiamo comparato i successi  film del array con lui due alla volta 
+  per vedere quale fosse il piu vecchio e se si fosse averata l-avremmo sostituito */
   let oldest = movies[0];
+  /* movie alla riga 211 diventa un elemento diverso ogni volta */
   movies.forEach((movie) => {
     if ((movie.Year) < (oldest.Year)) {
       oldest = movie;
@@ -216,7 +224,7 @@ console.log(oldestMovie());
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 
 */
-const moviesNumber= movies.length
+const moviesNumber = movies.length
 console.log(moviesNumber)
 
 /* ESERCIZIO 11 (map)
